@@ -90,16 +90,19 @@ class LinkedList:
     # return the string
     return list_string
 
-
-
-
-
-
-
-
   # return the sum of all the values in the linked list
   def sum(self):
-    pass
+    # variable for the sum of all values
+    node_sum = 0
+    # start the loop at the head
+    current_node = self.head
+    while current_node != None:
+      # add value to running total
+      node_sum += current_node.value
+      # go to the next node
+      current_node = current_node.next
+
+    return node_sum
 
   # return a [list] (regular python list) from all the values in the linked list
   def to_list(self):

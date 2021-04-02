@@ -11,9 +11,11 @@ our_list.append(42)
 our_list.append(1003)
 our_list.append(67)
 
+print(our_list.sum())
 
-print('before pop', our_list)
 
-our_list.pop()
+# print('before pop', our_list)
 
-print('after pop', our_list)
+# our_list.pop()
+
+# print('after pop', our_list)
