@@ -54,8 +54,22 @@ class LinkedList:
     pass
 
   # print out out linked list 
-  # def __repr__(self):
-  #   pass
+  def __repr__(self):
+    # string to return
+    list_string = ''
+    # loop over the whole list
+    # start at the head of the list
+    current_node = self.head
+    index = 0
+    while current_node != None:
+      # the value of each node to our return string
+      list_string += f'{index}: {current_node.value}\n'
+      index += 1
+      # go to the next node
+      current_node = current_node.next
+
+    # return the string
+    return list_string
 
 
 
