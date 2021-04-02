@@ -33,7 +33,7 @@ class LinkedList:
   def append(self, value):
     # create a new node from the given value
     new_node = Node(value)
-    print('🥴🥴🥴🥴🥴🥴🥴', new_node)
+    # print('🥴🥴🥴🥴🥴🥴🥴', new_node)
     # check list is empty -- make the new node the head if so
     if self.is_empty():
       self.head = new_node
@@ -45,7 +45,7 @@ class LinkedList:
         current_node = current_node.next
       # set the last node's next to be new node
       current_node.next = new_node
-      print('😅😅😅😅😅😅😅', current_node.next)
+      # print('😅😅😅😅😅😅😅', current_node.next)
 
     # increment the self.length
     self.length += 1
@@ -53,7 +53,24 @@ class LinkedList:
 
   # remove the last node and return it 
   def pop(self):
-    pass
+    # check if the list is empty -- if so return None
+    if self.is_empty(): 
+      return None
+    # keep track of the previous node and current node while we loop
+    previous_node = None
+    current_node = self.head
+    while current_node.next != None:
+      # update the previous node
+      previous_node = current_node
+      # update the current node
+      current_node = current_node.next
+    
+    # set the previous node's next to be None
+    previous_node.next = None
+    # decrease the self.length of the list
+    self.length -= 1
+    # return the node we removed 
+    return current_node
 
   # print out out linked list 
   def __repr__(self):
