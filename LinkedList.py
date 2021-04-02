@@ -10,7 +10,7 @@ class Node:
 
   # method override for printing
   # like __str__ but you can use any data type
-  def __str__(self):
+  def __repr__(self):
     return f'{self.value}'
 
 # test_node = Node('test string node')
@@ -33,6 +33,7 @@ class LinkedList:
   def append(self, value):
     # create a new node from the given value
     new_node = Node(value)
+    print('🥴🥴🥴🥴🥴🥴🥴', new_node)
     # check list is empty -- make the new node the head if so
     if self.is_empty():
       self.head = new_node
@@ -44,6 +45,7 @@ class LinkedList:
         current_node = current_node.next
       # set the last node's next to be new node
       current_node.next = new_node
+      print('😅😅😅😅😅😅😅', current_node.next)
 
     # increment the self.length
     self.length += 1
