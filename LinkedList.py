@@ -9,7 +9,7 @@ class Node:
   
   # for printing
   def __repr__(self):
-    return self.value
+    return f'{self.value}'
 
 # ## # ## # ## # ## 
 # the linked list 'manager' class
